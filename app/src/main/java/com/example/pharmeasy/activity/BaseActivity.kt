@@ -21,7 +21,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import retrofit2.HttpException
+//import retrofit2.HttpException
 import java.io.IOException
 import java.net.SocketTimeoutException
 
