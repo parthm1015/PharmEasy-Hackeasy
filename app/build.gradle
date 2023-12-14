@@ -7,27 +7,36 @@ plugins {
 
 android {
     namespace 'com.example.pharmeasy'
-    compileSdk 33
+    compileSdk 34
+
 
     defaultConfig {
         applicationId "com.example.pharmeasy"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode project.versionCode.toInteger()
+        versionName project.versionName
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildFeatures {
         dataBinding true
         viewBinding true
+        buildConfig = true
     }
 
     buildTypes {
         release {
+            buildConfigField "String", "API_URL", project.prod_url
             minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        staging {
+            buildConfigField "String", "API_URL", project.staging_url
+            debuggable true
+            applicationIdSuffix "staging"
         }
     }
     compileOptions {
@@ -49,6 +58,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
@@ -63,4 +76,15 @@ dependencies {
     implementation 'com.google.firebase:firebase-core'
     implementation 'com.google.firebase:firebase-perf'
     implementation("com.google.firebase:firebase-perf-ktx")
+
+    implementation 'com.squareup.okhttp3:okhttp:3.12.12'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.11.0') {
+        exclude group: 'glide-parent'
+    }
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.12'
+
+
+    stagingImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+
 }

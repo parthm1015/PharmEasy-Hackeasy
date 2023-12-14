@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmeasy.R
 import com.example.pharmeasy.model.MedicineSchedule
+import com.example.pharmeasy.model.Schedule
 
-class MedicineScheduleAdapter(private val context: Context, private val list: List<MedicineSchedule>): RecyclerView.Adapter<MedicineScheduleAdapter.MedicineScheduleHolder>() {
+class MedicineScheduleAdapter(private val context: Context, private val list: List<Schedule>): RecyclerView.Adapter<MedicineScheduleAdapter.MedicineScheduleHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicineScheduleHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.layout_medicine_schedule, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.layout_schedule_details, parent, false)
         return MedicineScheduleHolder(view)
     }
 
@@ -25,6 +26,7 @@ class MedicineScheduleAdapter(private val context: Context, private val list: Li
 
     class MedicineScheduleHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
+//        val time = view.te
 
     }
 }
