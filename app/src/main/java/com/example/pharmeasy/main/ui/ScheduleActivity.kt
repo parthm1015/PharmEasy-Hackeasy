@@ -37,6 +37,8 @@ class ScheduleActivity : BaseActivity() {
         val binding:com.example.pharmeasy.databinding.ActivityScheduleBinding = DataBindingUtil.setContentView(this,R.layout.activity_schedule)
         recyclerView = findViewById(R.id.recycler_view)
         setContentView(R.layout.activity_schedule)
+
+        getSchedule()
     }
 
 
