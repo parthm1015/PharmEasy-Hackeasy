@@ -28,8 +28,6 @@ import java.net.SocketTimeoutException
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    protected abstract val rootView: View?
-
     protected var progressIndicator: ProgressBar? = null
 
     private var dialog: Dialog? = null
