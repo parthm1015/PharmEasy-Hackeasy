@@ -40,8 +40,6 @@ class ScheduleActivity : BaseActivity() {
     }
 
 
-
-
     fun getSchedule(){
         compositeDisposable.add(service.getSchedule()
             .debounce(600, TimeUnit.MILLISECONDS)
