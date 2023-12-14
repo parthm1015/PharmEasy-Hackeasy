@@ -11,6 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PharmEasyHackeasy"
-        tools:targetApi="31" />
+        tools:targetApi="31">
+        <activity
+            android:name=".main.ui.ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminder"
+            android:exported="false" />
+    </application>
 
 </manifest>
