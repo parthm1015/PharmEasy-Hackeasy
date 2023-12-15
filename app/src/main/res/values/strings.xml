@@ -2,4 +2,13 @@
     <string name="app_name">PharmEasy-Hackeasy</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="app_widget_description">This is an app widget description</string>
+    <string name="submit">Submit</string>
+    <string name="search_products">Search Products</string>
+    <string name="frequency"><![CDATA[Frequency ->]]></string>
+    <string name="daily">Daily</string>
+    <string name="days_of_the_week">Days of the week</string>
+    <string name="custom">Custom</string>
+    <string name="dose"><![CDATA[Dose ->]]></string>
+    <string name="schedule_start"><![CDATA[Schedule Start ->]]></string>
+    <string name="schedule_end"><![CDATA[Schedule End ->]]></string>
 </resources>
