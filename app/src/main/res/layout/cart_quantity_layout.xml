@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:background="@drawable/cart_gray_rounded_bg"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+        <ImageButton
+            android:id="@+id/decrease"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:contentDescription="@null"
+            android:background="@color/gray17"
+            app:srcCompat="@drawable/minus" />
+    
+        <EditText
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:background="@null"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxWidth="46dp"
+            android:minWidth="46dp"
+            android:textColor="@color/zeplinPrimaryTextColor"
+            android:textSize="14sp"
+            tools:text="2"/>
+    
+        <ImageButton
+            android:id="@+id/increase"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@color/gray17"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/plus"  />
+    
+    </LinearLayout>
